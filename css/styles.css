@@ -145,13 +145,14 @@ button {
 .header-contacts:hover,
 .header-contacts:focus {
     color: var(--accent-color);
-}
-.header-contacts:hover .icon-header,
+ }
+/*.header-contacts:hover .icon-header,
 .header-contacts:focus .icon-header{
        fill: var(--accent-color);
-}
+} */
 .icon-header{  
-    fill: var(--icon-color);
+    /* fill: var(--icon-color); */
+    fill: currentColor;
     margin-right: 10px;
 }
 header{
@@ -350,28 +351,28 @@ header{
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    color: var(--icon-color);
     background-color: var(--white-color); 
 }
 /*при ховері на посилання - великий кружок- змінює колір*/
 .social-list-link:hover,
 .social-list-link:focus{
     background-color: var(--accent-color);
+    color: var(--white-color);
 }
-/*прои ховері на ссилку (велике коло44х44) svg змінює колір*/
+/*прои ховері на ссилку (велике коло44х44) svg змінює колір
 .social-list-link:hover .social-list-icon,
 .social-list-link:focus .social-list-icon{
     fill: var(--white-color);
-}
+}*/
 
 .social-list-icon{
-    /* width: 20px;
-        height: 20px; */
-    fill: var(--icon-color);
+    fill: currentColor;
 }
 /*=======================client==================*/
 /*h2*/
 .client-title{
-    margin-bottom: 50pt;
+    margin-bottom: 50px;
 
     font-weight: 700;
     font-size: 36px;
@@ -383,68 +384,78 @@ header{
 /*ul*/
 .client-list{
     display: flex;
-    justify-content: center;
     gap: 30px;
 }
 /*li*/
-.client-list-item{
+/* .client-list-item{
+   
+} */
+/*a*/
+.client-list-link{
     display: flex;
     width: 170px;
     height: 92px;
     border: 1px solid var(--icon-color);
     align-items: center;
     justify-content: center;
+    color: var(--icon-color); /*+++*/
 }
 /*цвет и размер иконок по умолчанию*/
 .client-list-icon{
     width: 106px;
     height: 60px;
-    fill: var(--icon-color);
+    fill: currentColor;
+    /* fill: var(--icon-color); */
 }
-.client-list-item:hover .client-list-icon,
+.client-list-link:hover,
+.client-list-link:focus{
+    /* background-color: var(--accent-color) ; */
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+/* .client-list-item:hover .client-list-icon,
 .client-list-item:focus .client-list-icon{
     fill: var(--accent-color);
-}
+} */
 /*----------------------portfolio------------*/
 .btn.portfolio{
     margin-bottom: 34px;
 }
 .btn.portfolio{
-    /* padding-top: 94px;
-    padding-bottom: 50px; */
     display: flex;
     justify-content: center;
     column-gap: 8px;
 }
 /*ul*/
-.portfolio-cards-block{
+.portfolio-cards-list{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    
 }
 /*li*/
-.portfolio-cards{
+.portfolio-cards-list-item{
     flex-basis: calc((100% - 60px) / 3);
 }
-/*a*/
-.portfolio-cards:focus,
-.portfolio-cards:hover{
-    border: 1px solid #EEEEEE;
+/*a====img++++div(h+p)*/
+.portfolio-cards-list-link{
+    display: block;/*чтоб сработал ховер и фокус на ссылку*/
+}
+.portfolio-cards-list-link:focus,
+.portfolio-cards-list-link:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px 
     rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/*h2 p*/  
+/*h2+p=div*/  
 .portfolio-cards-title{
     padding: 20px 24px;
-    border: 1px solid var(--border-portfolio-color);
+    border-bottom: 1px solid var(--border-portfolio-color);
+    border-left: 1px solid var(--border-portfolio-color);
+    border-right: 1px solid var(--border-portfolio-color);
 }
 /*h2*/
 .portfolio .title{
-    /* margin-top: 20px; */
     margin-bottom: 4px;
-    /* margin-left: 24px; */
-
+   
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -452,10 +463,8 @@ header{
 }
 /*p*/
 .portfolio .text{
-    /* margin-bottom: 20px; */
     font-size: 16px;
     line-height: 1.88;
-    /* margin-left: 24px; */
 }
 
 /*============= кнопки портфолио =============*/ 
@@ -518,7 +527,7 @@ address {
 .footer-contacts:focus {
     color: var(--accent-color);
 }
-/*h3*/
+/*p*/
 .footer-title{
     margin-bottom: 18px;
     font-weight: 700;
@@ -529,7 +538,7 @@ address {
 /*общий блок футера*/
 .footer-block{
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 /*блок адрес*/
 .footer-block-logo-address{
@@ -537,11 +546,13 @@ address {
 }
 .social-list-link.footer{
     background-color: var(--footer-link-color);
+    color: var(--white-color);/*++*/
 }
 .social-list-icon.footer{
-        fill: var(--white-color);
+    fill: currentColor;
 }
 .social-list-link.footer:hover,
 .social-list-link.footer:focus {
     background-color: var(--accent-color);
+    color: var(--white-color);
 }
